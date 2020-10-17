@@ -17,14 +17,9 @@ a {
     color: #1e1e1e!important;
 }
 
-.background-header .main-nav .nav li:hover a {
-    color: #5fb759!important;
-    opacity: 1;
-}
-
+.background-header .main-nav .nav li:hover a,
 .background-header .nav li a.active {
-    color: #5fb759!important;
-    opacity: 1;
+    color: #c3bdb4;
 }
 
 .header-area {
@@ -378,6 +373,7 @@ a {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: 3vh;
 }
 
 footer {
@@ -387,7 +383,43 @@ footer {
     text-align: center;
 }
 
-footer .left-text-content p {
+footer .left-text-content p,
+footer .right-text-content a {
     color: #fff;
     font-size: 18px;
+}
+
+#contact .row {
+    justify-content: center;
+}
+
+#contact .row .right-text-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    padding-left: 2vw;
+}
+
+#contact .row .left-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 2vw;
+}
+
+@media (max-width: 575px) {
+    #contact .row .right-text-content,
+    #contact .row .left-text-content {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+#contact img {
+    width: 100%; 
+    max-width: 260px;
+    height: auto;
+    margin-bottom: 5vh;
 }
