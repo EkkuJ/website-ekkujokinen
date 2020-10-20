@@ -358,7 +358,7 @@ a {
 .content-wrapper {
     background-color: #fff;
     padding: 5vh 0 5vh 0;
-    align-items: center;    
+    align-items: center;
 }
 
 .section {
@@ -413,24 +413,49 @@ a {
     outline: none;
 }
 
-#projects img {
-    margin: auto;
+#projects .project-slider {
+    height: 60vh;
 }
 
-#projects .previous-arrow {
-    position: absolute;
-    left: 50%;
-    margin-top: -34px;
-    margin-left: -105px;
-    z-index: 10;
+#projects .img-fill {
+    text-align: center;
 }
 
-#projects .next-arrow {
-    position: absolute;
+#projects .img-fill img {
+    object-fit: cover;
+    width: 100%;
+    height: 60vh;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+#projects .img-fill img {
+    position: relative;
+    display: inline-block;
+    max-width: none;
+}
+
+#projects .img-fill .project-text {
+    background-color: #c3bdb4;
+    opacity: 0.9;
+    color: white;
+    font-weight: 500;
+    border: 3px solid #f1f1f1;
+    position: relative;
+    top: -30vh;
     left: 50%;
-    margin-top: -34px;
-    margin-left: 69px;
-    z-index: 10;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 90%;
+    max-width: 730px;
+    padding: 15px;
+    text-align: center;
+}
+
+#projects .slick-dots {
+    position: absolute;
+    top: 62vh;
+    z-index: 11;
 }
 
 #projects .button-group button {
@@ -442,12 +467,26 @@ a {
     color: #fff;
     border-radius: 20px;
     border: none;
-
 }
 
 #projects .button-group button:focus {
     outline: none;
-    
+}
+
+#projects .previous-arrow {
+    position: absolute;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -105px;
+    z-index: 10;
+}
+
+#projects .next-arrow {
+    position: absolute;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: 69px;
+    z-index: 10;
 }
 
 footer {
