@@ -15,35 +15,47 @@
             $("header").removeClass("background-header");
         }
 
-        if(scroll >= box - header) {
-            if(width < 991) {
+        if (scroll >= box - header) {
+            if (width < 991) {
                 $('.menu-trigger').removeClass('active');
-                $('.header-area .nav').slideUp(0);	
-            }	
+                $('.header-area .nav').slideUp(0);
+            }
         }
     });
 
-    if($('.menu-trigger').length){
-		$(".menu-trigger").on('click', function() {	
-			$(this).toggleClass('active');
+    if ($('.menu-trigger').length) {
+        $(".menu-trigger").on('click', function () {
+            $(this).toggleClass('active');
             $('.header-area .nav').slideToggle(200);
-		});
+        });
     }
-    
-    $('a[href*=\\#]:not([href=\\#])').on('click', function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			if (target.length) {
-				if(width < 991) {
-					$('.menu-trigger').removeClass('active');
-					$('.header-area .nav').slideUp(200);	
-				}				
-				$('html,body').animate({
-					scrollTop: (target.offset().top) - 80
-				}, 700);
-				return false;
-			}
-		}
-	});
+
+    $('a[href*=\\#]:not([href=\\#])').on('click', function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                if (width < 991) {
+                    $('.menu-trigger').removeClass('active');
+                    $('.header-area .nav').slideUp(200);
+                }
+                $('html,body').animate({
+                    scrollTop: (target.offset().top) - 80
+                }, 700);
+                return false;
+            }
+        }
+    });
+
+    $(document).ready(function () {
+        $('.project-slider').slick({
+            focusOnSelect: false,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            pauseOnHover: true,
+            prevArrow: $('.previous-arrow'),
+            nextArrow: $('.next-arrow')
+        });
+    });
 })(window.jQuery);

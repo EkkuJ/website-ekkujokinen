@@ -1,4 +1,3 @@
-
 a {
     text-decoration: none !important;
 }
@@ -17,8 +16,7 @@ a {
     color: #1e1e1e!important;
 }
 
-.background-header .main-nav .nav li:hover a,
-.background-header .nav li a.active {
+.background-header .main-nav .nav li:hover a, .background-header .nav li a.active {
     color: #c3bdb4;
 }
 
@@ -360,6 +358,7 @@ a {
 .content-wrapper {
     background-color: #fff;
     padding: 5vh 0 5vh 0;
+    align-items: center;    
 }
 
 .section {
@@ -374,19 +373,6 @@ a {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 3vh;
-}
-
-footer {
-    padding: 40px 0px;
-    background: #c3bdb4;
-    background: linear-gradient(145deg, #c3bdb4 0%, #c3b5b4 100%);
-    text-align: center;
-}
-
-footer .left-text-content p,
-footer .right-text-content a {
-    color: #fff;
-    font-size: 18px;
 }
 
 #contact .row {
@@ -410,16 +396,68 @@ footer .right-text-content a {
 }
 
 @media (max-width: 575px) {
-    #contact .row .right-text-content,
-    #contact .row .left-text-content {
+    #contact .row .right-text-content, #contact .row .left-text-content {
         text-align: center;
         align-items: center;
     }
 }
 
 #contact img {
-    width: 100%; 
+    width: 100%;
     max-width: 260px;
     height: auto;
     margin-bottom: 5vh;
+}
+
+#projects .project:focus {
+    outline: none;
+}
+
+#projects img {
+    margin: auto;
+}
+
+#projects .previous-arrow {
+    position: absolute;
+    left: 50%;
+    margin-top: -34px;
+    margin-left: -105px;
+    z-index: 10;
+}
+
+#projects .next-arrow {
+    position: absolute;
+    left: 50%;
+    margin-top: -34px;
+    margin-left: 69px;
+    z-index: 10;
+}
+
+#projects .button-group button {
+    display: inline-block;
+    background-color: #c3bdb4;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+
+}
+
+#projects .button-group button:focus {
+    outline: none;
+    
+}
+
+footer {
+    padding: 40px 0px;
+    background: #c3bdb4;
+    background: linear-gradient(145deg, #c3bdb4 0%, #c3b5b4 100%);
+    text-align: center;
+}
+
+footer .left-text-content p, footer .right-text-content a {
+    color: #fff;
+    font-size: 18px;
 }
